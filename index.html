@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CityStay Yerevan — Аренда уютных квартир</title>
+    <title>CityStay Yerevan - Аренда уютных квартир</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Шапка с текстовым логотипом -->
     <header class="navbar">
         <div class="nav-container">
             <a href="#" class="logo-text">City<span>Stay</span></a>
@@ -17,20 +19,17 @@
         </div>
     </header>
 
-    <!-- Главный экран -->
     <section class="hero-screen">
         <div class="hero-content">
             <h1 class="fade-in-up">Поиск лучших апартаментов в Ереване под ваш запрос</h1>
-            <p class="hero-subtitle fade-in-up delay-1">Мы не просто сдаем жилье — мы подберем идеальный вариант в мессенджерах за 10 минут.</p>
+            <p class="hero-subtitle fade-in-up delay-1">Мы не просто сдаем жилье - мы подберем идеальный вариант в мессенджерах за 10 минут.</p>
             <a href="#features-section" class="btn-gold fade-in-up delay-2">Узнать больше <i class="fas fa-chevron-down"></i></a>
         </div>
     </section>
 
-    <!-- Блок преимуществ -->
     <section id="features-section" class="features-container-fluid">
         <div class="features-wrapper">
             
-            <!-- Карточка 1 -->
             <div class="scroll-card reveal-box">
                 <div class="icon-box">
                     <i class="fas fa-shield-alt gold-icon"></i>
@@ -39,28 +38,35 @@
                 <p>Мы предоставляем официальный договор, а цена фиксируется в момент бронирования. Никаких комиссий, процентов или внезапных доплат на месте.</p>
             </div>
 
-            <!-- Карточка 2 -->
             <div class="scroll-card reveal-box">
                 <div class="icon-box">
                     <i class="fas fa-hand-sparkles gold-icon"></i>
                 </div>
                 <h2>Идеальный сервис</h2>
-                <p>Мы лично контролируем каждый объект. Перед вашим приездом проводится профессиональный клининг. В апартаментах вас всегда ждет кристальная чистота, свежее постельное белье, полотенца, высокоскоростной Wi-Fi, стиральная машина и всё необходимое.</p>
+                <p>Мы лично контролируем каждый объект. Перед вашим приездом проводится профессиональный клининг. В апартаментах вас всегда ждет кристальная чистота, свежее постельное белье, полотенца, высокоскоростной Wi-Fi и всё необходимое.</p>
             </div>
 
-            <!-- Карточка 3 -->
             <div class="scroll-card reveal-box">
                 <div class="icon-box">
                     <i class="fas fa-map-marked-alt gold-icon"></i>
                 </div>
                 <h2>Лучшие локации</h2>
-                <p>Все квартиры расположены в центре Еревана. Пешая доступность до главных точек: Малый Центр, Каскад, Северный проспект и Площадь Республики. Всё самое интересное - рядом.</p>
+                <p>Все варианты расположены в центре города. Пешая доступность до главных точек: Малый Центр, Каскад, Северный проспект и Площадь Республики. Всё самое интересное - рядом.</p>
             </div>
 
         </div>
     </section>
 
-    <!-- Финальный экран: Контакты -->
+    <section class="map-section">
+        <div class="map-container reveal-box">
+            <h2>Где нас найти</h2>
+            <p>Наша точка ориентира в Ереване. Мы всегда на связи и готовы помочь с подбором жилья или быстрыми вопросами. Находимся именно тут!</p>
+            <div class="map-wrapper">
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=44.512176%2C40.164821&z=17&l=map&pt=44.512176,40.164821,pm2dol" width="100%" height="450" frameborder="0" allowfullscreen="true"></iframe>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="contact-screen">
         <div class="booking-card reveal-box">
             <h2>Получите персональную подборку</h2>
@@ -87,7 +93,6 @@
         <p>&copy; 2026 CityStay Yerevan. Сервис посуточной аренды.</p>
     </footer>
 
-    <!-- Скрипт плавного проявления -->
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -95,7 +100,7 @@
                     entry.target.classList.add('active');
                 }
             });
-        }, { threshold: 0.15 });
+        }, { threshold: 0.10 });
 
         document.querySelectorAll('.reveal-box').forEach((box) => {
             observer.observe(box);
