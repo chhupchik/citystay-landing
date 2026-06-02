@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #05101f;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Навигация */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(5, 16, 31, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* Текстовый логотип взамен битой картинки */
+.logo-text {
+    font-size: 22px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.logo-text span {
+    color: #dfba6b;
+    font-weight: 300;
+    margin-left: 2px;
+}
+
+.nav-phone { 
+    color: #dfba6b; 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 15px; 
+}
+
+/* Первый экран (Hero) */
+.hero-screen {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(to bottom, rgba(5, 16, 31, 0.5), #05101f), 
+                url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1920') center/cover no-repeat;
+}
+
+.hero-content { max-width: 800px; }
+.hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+.hero-subtitle { font-size: 1.2rem; color: #cbd5e1; margin-bottom: 35px; }
+
+.btn-gold {
+    display: inline-block;
+    background: linear-gradient(135deg, #dfba6b 0%, #b89343 100%);
+    color: #05101f;
+    padding: 16px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 25px rgba(223, 186, 107, 0.2);
+    transition: all 0.3s ease;
+}
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(223, 186, 107, 0.4); }
+
+/* Блок карточек на фоне жилья */
+.features-container-fluid {
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #05101f, rgba(5, 16, 31, 0.85), #05101f), 
+                url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1920') center/cover fixed no-repeat;
+}
+
+.features-wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* Стеклянные карточки */
+.scroll-card {
+    background: rgba(10, 25, 47, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 45px 35px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    background: rgba(223, 186, 107, 0.08);
+    border: 1px solid rgba(223, 186, 107, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+.gold-icon { font-size: 28px; color: #dfba6b; }
+
+.scroll-card h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 15px; }
+.scroll-card p { color: #94a3b8; font-size: 1.05rem; line-height: 1.6; }
+
+/* Экран контактов */
+.contact-screen {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, #05101f, rgba(5, 16, 31, 0.9)), 
+                url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1920') center/cover no-repeat;
+}
+
+.booking-card {
+    background: rgba(10, 25, 47, 0.9);
+    border: 1px solid rgba(223, 186, 107, 0.3);
+    padding: 50px 40px;
+    border-radius: 28px;
+    max-width: 550px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+}
+.booking-card h2 { font-size: 2rem; margin-bottom: 15px; }
+.booking-card p { color: #94a3b8; font-size: 1.05rem; }
+
+/* Мессенджеры */
+.social-links { display: flex; flex-direction: column; gap: 12px; margin-top: 30px; }
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+.telegram { background-color: #0088cc; }
+.whatsapp { background-color: #22c55e; }
+.viber { background-color: #7c3aed; }
+.phone { background-color: transparent; border: 1px solid #dfba6b; color: #dfba6b; }
+
+.social-btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
+.phone:hover { background-color: rgba(223, 186, 107, 0.08); }
+
+/* Анимации скролла */
+.reveal-box {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.reveal-box.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Начальная анимация загрузки */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUpAnim 0.6s ease forwards;
+}
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+
+@keyframes fadeInUpAnim {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer { text-align: center; padding: 30px; color: #475569; font-size: 0.85rem; background: #05101f; }
+
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2rem; }
+    .scroll-card, .booking-card { padding: 35px 20px; }
+    .scroll-card h2 { font-size: 1.5rem; }
+}
