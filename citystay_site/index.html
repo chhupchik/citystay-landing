@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityStay Yerevan — Аренда уютных квартир</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Шапка с текстовым логотипом -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo-text">City<span>Stay</span></a>
+            <a href="tel:+37494917722" class="nav-phone"><i class="fas fa-phone-alt"></i> +374 94 91 77 22</a>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero-screen">
+        <div class="hero-content">
+            <h1 class="fade-in-up">Поиск лучших апартаментов в Ереване под ваш запрос</h1>
+            <p class="hero-subtitle fade-in-up delay-1">Мы не просто сдаем жилье — мы подберем идеальный вариант в мессенджерах за 10 минут.</p>
+            <a href="#features-section" class="btn-gold fade-in-up delay-2">Узнать больше <i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Блок преимуществ -->
+    <section id="features-section" class="features-container-fluid">
+        <div class="features-wrapper">
+            
+            <!-- Карточка 1 -->
+            <div class="scroll-card reveal-box">
+                <div class="icon-box">
+                    <i class="fas fa-shield-alt gold-icon"></i>
+                </div>
+                <h2>100% Безопасность</h2>
+                <p>Мы предоставляем официальный договор, а цена фиксируется в момент бронирования. Никаких комиссий, процентов или внезапных доплат на месте.</p>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="scroll-card reveal-box">
+                <div class="icon-box">
+                    <i class="fas fa-hand-sparkles gold-icon"></i>
+                </div>
+                <h2>Идеальный сервис</h2>
+                <p>Мы лично контролируем каждый объект. Перед вашим приездом проводится профессиональный клининг. В апартаментах вас всегда ждет кристальная чистота, свежее постельное белье, полотенца, высокоскоростной Wi-Fi, стиральная машина и всё необходимое.</p>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="scroll-card reveal-box">
+                <div class="icon-box">
+                    <i class="fas fa-map-marked-alt gold-icon"></i>
+                </div>
+                <h2>Лучшие локации</h2>
+                <p>Все квартиры расположены в центре Еревана. Пешая доступность до главных точек: Малый Центр, Каскад, Северный проспект и Площадь Республики. Всё самое интересное - рядом.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Финальный экран: Контакты -->
+    <section id="contact" class="contact-screen">
+        <div class="booking-card reveal-box">
+            <h2>Получите персональную подборку</h2>
+            <p>Напишите нам в удобный мессенджер. Менеджер моментально отправит вам доступные варианты с ценами, планировками и живыми видеообзорами.</p>
+            
+            <div class="social-links">
+                <a href="https://t.me/CityStayErevan" target="_blank" class="social-btn telegram">
+                    <i class="fab fa-telegram-plane"></i> Telegram
+                </a>
+                <a href="https://wa.me/37494917722" target="_blank" class="social-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="viber://chat?number=%2B37494917722" class="social-btn viber">
+                    <i class="fab fa-viber"></i> Viber
+                </a>
+                <a href="tel:+37494917722" class="social-btn phone">
+                    <i class="fas fa-phone-alt"></i> Позвонить менеджеру
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 CityStay Yerevan. Сервис посуточной аренды.</p>
+    </footer>
+
+    <!-- Скрипт плавного проявления -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal-box').forEach((box) => {
+            observer.observe(box);
+        });
+    </script>
+</body>
+</html>
